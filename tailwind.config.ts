@@ -1,9 +1,14 @@
 import type { Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
+import themesConfig from "./app/themes/config";
 
 const config = {
   darkMode: ["class"],
-  content: ["./app/*.{ts,tsx}", "./core/*.{js,ts,jsx,tsx,mdx}"],
+  content: [
+    "./app/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./core/*.{js,ts,jsx,tsx,mdx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -15,16 +20,12 @@ const config = {
     },
     extend: {
       fontFamily: {
-        poppins: ["var(--poppins), sans-serif", ...fontFamily.sans],
+        poppins: ["var(--font-poppins), sans-serif", ...fontFamily.sans],
         sans: ["var(--font-sans), sans-serif", ...fontFamily.sans],
       },
       backgroundImage: {},
       colors: {
-        primary: {
-          DEFAULT: "#0755d1",
-          light: "#0755d1",
-          dark: "#0755d1",
-        },
+        ...themesConfig.color,
         secondary: {
           DEFAULT: "#f5f5f5",
         },
