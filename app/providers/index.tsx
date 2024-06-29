@@ -1,5 +1,6 @@
 import React from "react";
 import { AuthProvider } from "./AuthProvider";
+import ThemeProvider from "./ThemeProvider";
 
 function Provider({
   children,
@@ -8,7 +9,9 @@ function Provider({
 }>) {
   return (
     <>
-      <AuthProvider>{children} </AuthProvider>{" "}
+      <ThemeProvider>
+        <AuthProvider>{children} </AuthProvider>
+      </ThemeProvider>
     </>
   );
 }

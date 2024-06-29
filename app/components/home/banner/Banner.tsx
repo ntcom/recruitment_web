@@ -1,7 +1,7 @@
 import React from "react";
 
 function Banner() {
-  return <div>Banner</div>;
+  return <div className="bg-primary-dark">Banner</div>;
 }
 
 export default Banner;
