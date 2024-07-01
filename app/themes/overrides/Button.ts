@@ -5,7 +5,7 @@ const Button = (_theme: Theme): ThemeOptions["components"] => {
     MuiButton: {
       defaultProps: {
         variant: "contained",
-        size: "medium",
+        size: "large",
         disableElevation: true,
       },
       styleOverrides: {

@@ -1,12 +1,13 @@
-import type { Theme, ThemeOptions } from '@mui/material/styles';
+import type { Theme, ThemeOptions } from "@mui/material/styles";
 
-const TextField = (_theme: Theme): ThemeOptions['components'] => {
+const TextField = (_theme: Theme): ThemeOptions["components"] => {
   return {
     MuiTextField: {
       defaultProps: {
-        size: 'small',
-        variant: 'outlined',
+        size: "medium",
+        variant: "outlined",
       },
+      styleOverrides: {},
     },
   };
 };
