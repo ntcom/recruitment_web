@@ -9,6 +9,10 @@ const OutlinedInput = (theme: Theme): ThemeOptions["components"] => {
           "&.Mui-disabled": {
             backgroundColor: theme.palette.app.background.disableField,
           },
+          borderColor: "#ebebeb",
+          "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+            border: "1px solid #333",
+          },
         },
         input: {
           "&.Mui-disabled": {
@@ -22,5 +26,4 @@ const OutlinedInput = (theme: Theme): ThemeOptions["components"] => {
     },
   };
 };
-
 export default OutlinedInput;

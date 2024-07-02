@@ -1,10 +1,11 @@
-import type { Theme, ThemeOptions } from '@mui/material/styles';
+import type { Theme, ThemeOptions } from "@mui/material/styles";
 
-const Select = (_theme: Theme): ThemeOptions['components'] => {
+const Select = (_theme: Theme): ThemeOptions["components"] => {
   return {
     MuiSelect: {
       defaultProps: {
-        size: 'small',
+        size: "medium",
+        variant: "outlined",
         MenuProps: {
           disableAutoFocusItem: true,
           PaperProps: {
