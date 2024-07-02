@@ -7,7 +7,9 @@ const TextField = (_theme: Theme): ThemeOptions["components"] => {
         size: "medium",
         variant: "outlined",
       },
-      styleOverrides: {},
+      styleOverrides: {
+        root: {},
+      },
     },
   };
 };

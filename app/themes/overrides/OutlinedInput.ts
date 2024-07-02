@@ -14,12 +14,20 @@ const OutlinedInput = (theme: Theme): ThemeOptions["components"] => {
             border: "1px solid #333",
           },
         },
+        sizeSmall: {
+          height: 50,
+        },
         input: {
           "&.Mui-disabled": {
             color: theme.palette.text.primary,
             backgroundColor: theme.palette.app.background.disableField,
             WebkitTextFillColor: theme.palette.text.primary,
             userSelect: "revert",
+          },
+          "::placeholder": {
+            color: "#8c8c98",
+            letterSpacing: 1.1,
+            fontSize: "15px",
           },
         },
       },

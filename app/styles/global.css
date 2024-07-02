@@ -18,3 +18,14 @@ body {
   position: relative;
   overflow: hidden;
 }
+
+.app-card {
+  @apply border border-solid border-[#d6d5d5];
+}
+
+.app-heading {
+  @apply text-[38px] font-semibold text-[#333333] leading-[1.4];
+}
+.app-heading-2 {
+  @apply text-[28px] font-semibold text-[#333333] leading-[1.4];
+}
