@@ -1,5 +1,8 @@
 "use client"
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
+// import { Button } from "../../common/button/Button";
 
 function Header() {
   const [scrolled, setScrolled] = React.useState(false);
@@ -61,7 +64,7 @@ function Header() {
                 <li key={index} className="relative mx-[12px]">
                   <a href={`${item.link}`} className="block capitalize leading-[22.5px] py-[15px] transition-all duration-300 ease-linear">
                     {item.title}
-                    {item?.child && <span className="ml-[4px] text-[8px]">icon</span>}
+                    {item?.child && <FontAwesomeIcon icon={faAngleDown} className="ml-[4px] w-[10px]" />}
                   </a>
                   {item?.child && <div className="menu-child">
                     <ul className="w-full h-full">
@@ -105,7 +108,7 @@ function Header() {
               })}
             </ul>
             <div className="button-header-wrap flex items-center justify-center gap-[12px] py-[10px] bg-[#fff]">
-              <a href="/login" className="button-login border-button text-[13px] text-[#333] w-[107px] h-[39.5px] flex items-center justify-center"><p className="relative z-[1]">Login</p></a>
+              {/* <Button  hoverclass='border-button' width='107px' height='39.5px' icon='faSquarePlus}' value='Login' /> */}
               <a href="/register" className="button-register bg-button text-[13px] text-[#fff] w-[107px] h-[39.5px] flex items-center justify-center"><p className="relative z-[1]">Sign Up</p></a>
             </div>
           </div>
