@@ -18,3 +18,151 @@ body {
   position: relative;
   overflow: hidden;
 }
+.container {
+  max-width: 1344px;
+  margin: auto;
+  padding: 0 12px;
+}
+
+.title-section {
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 1.4;
+  text-align: center;
+}
+@media (max-width: 1023.5px) {
+  .title-section {
+    font-size: 28px;
+  }
+}
+@media (max-width: 767.5px) {
+  .title-section {
+    font-size: 20px;
+  }
+}
+
+/* Button have border */
+.border-button {
+  border: 1px solid;
+  border-image-source: linear-gradient(
+    90deg,
+    rgb(56, 167, 69) 0%,
+    rgb(76, 206, 91) 63%
+  );
+  border-image-slice: 1;
+  position: relative;
+  transition: all 0.5s ease;
+}
+.border-button p {
+  position: relative;
+  z-index: 1;
+}
+.border-button::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  background: linear-gradient(90deg, rgb(56, 167, 69) 0%, rgb(76, 206, 91) 63%);
+  transition: 0.5s all ease;
+  z-index: 0;
+}
+.border-button:hover {
+  color: #fff;
+}
+.border-button:hover::after {
+  width: 100%;
+  opacity: 1;
+}
+
+/* Button have background */
+.bg-button {
+  border: 1px solid;
+  border-image-source: linear-gradient(
+    90deg,
+    rgb(56, 167, 69) 0%,
+    rgb(76, 206, 91) 63%
+  );
+  border-image-slice: 1;
+  position: relative;
+  transition: all 0.5s ease;
+}
+.bg-button::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  background: linear-gradient(90deg, rgb(56, 167, 69) 0%, rgb(76, 206, 91) 63%);
+  transition: 0.5s all ease;
+  z-index: 0;
+}
+.bg-button:hover {
+  color: #333;
+}
+.bg-button:hover::after {
+  width: 0;
+  opacity: 0;
+}
+
+/* Header */
+@media (min-width: 1024px) {
+  header.scroll {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    box-shadow: 0 0 15px 0 #ddd;
+  }
+}
+.menu > ul > li:hover > a {
+  color: #4bcc5a;
+}
+.menu > ul > li.active > a {
+  color: #4bcc5a;
+}
+.menu > ul > li > .menu-child {
+  -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
+  background: #0d1028;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 250px;
+  z-index: 20;
+  display: block;
+  border-radius: 6px;
+  padding: 20px 5px;
+  transform: translateY(40px);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu > ul > li:hover > .menu-child {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu > ul > li > .menu-child > ul > li:hover > a {
+  color: #4bcc5a;
+}
+
+.menu-mobile .button-header-wrap {
+  box-shadow: 0 6px 8px 0 rgba(221, 221, 221, 0.4117647059);
+}
+.drop-menu > ul.open {
+  max-height: 350px;
+  overflow-y: auto;
+}
+.drop-menu > ul > li:last-child > a {
+  border: none;
+}
+
+.menu-child.open {
+  max-height: 500px;
+}
