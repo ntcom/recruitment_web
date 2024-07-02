@@ -12,7 +12,9 @@ interface Props<T extends FieldValues> extends Omit<TextFieldProps, "name"> {
 }
 
 const ControllerTextField = <T extends FieldValues>(props: Props<T>) => {
-  const { control, name, placeholder, disabled, label, id, ...rest } = props;
+  const { control, name, placeholder, disabled, label, id, size, ...rest } =
+    props;
+  console.log("🚀 ~ size:", size);
 
   return (
     <div>
@@ -26,6 +28,7 @@ const ControllerTextField = <T extends FieldValues>(props: Props<T>) => {
               error={Boolean(error)}
               placeholder={disabled ? void 0 : placeholder}
               disabled={disabled}
+              size={size}
               {...field}
               {...rest}
             />

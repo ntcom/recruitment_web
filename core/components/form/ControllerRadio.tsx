@@ -35,6 +35,7 @@ const ControllerRadio = <T extends FieldValues>(props: Props<T>) => {
     label,
     pathValue,
     onChangeSelect,
+    sx,
     ...rest
   } = props;
 
@@ -46,6 +47,7 @@ const ControllerRadio = <T extends FieldValues>(props: Props<T>) => {
           <>
             <RadioGroup
               row={row}
+              sx={sx}
               {...field}
               onChange={(event) => {
                 const valueAsNumber = Number(event.target.value);

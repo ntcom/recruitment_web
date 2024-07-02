@@ -7,8 +7,8 @@ export default function ProtectedLayout({
   children: React.ReactNode;
 }>) {
   const { isAuthenticated } = useAuth();
-  if (!isAuthenticated) {
-    redirect("/login");
-  }
+  // if (!isAuthenticated) {
+  //   redirect("/login");
+  // }
   return <>{children}</>;
 }

@@ -18,11 +18,6 @@ body {
   position: relative;
   overflow: hidden;
 }
-.container {
-  max-width: 1344px;
-  margin: auto;
-  padding: 0 12px;
-}
 
 .title-section {
   font-weight: 600;
@@ -741,4 +736,14 @@ footer {
 
 .statis {
   background: linear-gradient(90deg, rgb(56, 167, 69) 0%, rgb(76, 206, 91) 63%);
+}
+.app-card {
+  @apply border border-solid border-[#d6d5d5];
+}
+
+.app-heading {
+  @apply text-[38px] font-semibold text-[#333333] leading-[1.4];
+}
+.app-heading-2 {
+  @apply text-[28px] font-semibold text-[#333333] leading-[1.4];
 }
