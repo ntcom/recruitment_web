@@ -1,8 +1,10 @@
+"use client"
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import Button from '../../common/button';
 
 function CompaniesArea() {
   const CompanyLists = [
@@ -78,7 +80,7 @@ function CompaniesArea() {
                     <p className='text-[14px] text-[#808291] font-normal'>{item.address}</p>
                   </div>
                   <div className='flex justify-center'>
-                    <a href={`${item.link}`} className='inline-flex items-center justify-center border-button w-[78px] h-[43px] font-normal text-[14px]'><p>Hiring</p></a>
+                    <Button hoverclass='border-button' link={item.link} width='78px' height='43px' value='Hiring' color='#333' />
                   </div>
                 </div>
               </SwiperSlide>
