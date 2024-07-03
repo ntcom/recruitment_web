@@ -1,13 +1,29 @@
+"use client"
 import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function Button({hoverclass, width, height, icon, value, ...prop}:any) {
-  return (
-    <a href="/login" className={`${hoverclass} text-[13px] md:text-[16px] text-[#333] w-${width} h-{height} flex items-center justify-center gap-[4px]`}>
-      <FontAwesomeIcon icon={icon} />
-      <p className="relative z-[1]">{ value }</p>
-    </a>
-  )
+interface buttonProps {
+  hoverclass?: string,
+  width?: string,
+  height?: string,
+  icon?: string | any,
+  value: string,
+  color?: string,
+  link?: string,
+  classProp?: string,
+  onClick?: any,
+  active?: boolean,
+  isLink?: boolean
 }
 
-export default Button
+function Button(props: buttonProps) {
+  return props.isLink ? <a href={`${props.link}`} onClick={props.onClick} style={{ width: `${props.width}`, height: `${props.height}` }} className={`${props.hoverclass} text-[13px] md:text-[16px] text-[${props.color}] flex items-center justify-center gap-[8px] ${props.classProp} ${props.active ? 'active' : ''}`}>
+    <FontAwesomeIcon icon={props.icon} />
+    <p className="relative z-[1]">{props.value}</p>
+  </a> : <button onClick={props.onClick} style={{ width: `${props.width}`, height: `${props.height}` }} className={`${props.hoverclass} text-[13px] md:text-[16px] text-[${props.color}] flex items-center justify-center gap-[8px] ${props.classProp} ${props.active ? 'active' : ''}`}>
+    <FontAwesomeIcon icon={props.icon} />
+    <p className="relative z-[1]">{props.value}</p>
+  </button>
+}
+
+export default Button;

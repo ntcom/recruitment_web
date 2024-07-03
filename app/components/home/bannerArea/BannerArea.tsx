@@ -12,11 +12,11 @@ function BannerArea() {
           <div className="grid grid-cols-1 lg:grid-cols-3">
             <div className="job-search relative px-[12px]">
               <input type="text" placeholder="Job Title" />
-              <button className="text-[25px]"><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
+              <button className="text-[18px] md:text-[25px]"><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
             </div>
             <div className="city-search relative px-[12px]">
               <input type="text" placeholder="City or State" />
-              <button className="text-[25px]"><FontAwesomeIcon icon={faLocationDot} /></button>
+              <button className="text-[22px] md:text-[25px]"><FontAwesomeIcon icon={faLocationDot} /></button>
             </div>
             <select name="" id="">
               <option value="">ICT</option>

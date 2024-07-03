@@ -1,8 +1,8 @@
 "use client"
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
-// import { Button } from "../../common/button/Button";
+import { faAngleDown, faBars, faMinus, faPlus, faSquarePlus, faUser, faXmark } from '@fortawesome/free-solid-svg-icons';
+import Button from "../../common/button";
 
 function Header() {
   const [scrolled, setScrolled] = React.useState(false);
@@ -84,20 +84,29 @@ function Header() {
           </ul>
         </div>
         <div className="menu-mobile lg:hidden">
-          <button className=" text-[#fff]" onClick={handleIsMenu}>Menu</button>
+          <button className=" text-[#fff] text-[28px] outline-none" onClick={handleIsMenu}>
+            {openMenu ? <FontAwesomeIcon icon={faXmark} /> : <FontAwesomeIcon icon={faBars} />}
+          </button>
           <div className="drop-menu absolute top-[100%] left-0 w-full ">
-            <ul className={`bg-[#fff] max-h-0 overflow-hidden transition-all duration-500 ease-linear ${openMenu ? 'open' : ''}`}>
+            <ul className={`bg-[#fff] max-h-0 overflow-hidden transition-all duration-300 ease-linear ${openMenu ? 'open' : ''}`}>
               {linkData.map((item, index) => {
                 return (
                   <li key={index} className="relative">
-                    <a href="javascript:void(0)" onClick={() => handleIsSubMenu(index)} className="block capitalize text-[14px] text-[#677294] leading-[22.5px] py-[14px] px-[5%] border-b-[1px] border-solid border-[#dbeefd]">
-                      {item.title}
+                    <a href="javascript:void(0)" onClick={() => handleIsSubMenu(index)} className="capitalize text-[14px] text-[#677294] leading-[22.5px] py-[14px] px-[5%] border-b-[1px] border-solid border-[#dbeefd] flex items-center justify-between">
+                      <p>{item.title}</p>
+                      {item?.child && <button>
+                        {openSubMenu !== null ? <FontAwesomeIcon icon={faMinus} /> : <FontAwesomeIcon icon={faPlus} />}
+                      </button>}
                     </a>
-                    {item?.child && <div className={`menu-child max-h-0 overflow-hidden transition-all duration-1000 ease-linear ${openSubMenu === index ? 'open' : ''}`}>
+                    {item?.child && <div className={`menu-child overflow-hidden transition-all duration-300 ease-linear ${openSubMenu === index ? 'max-h-[300px]' : 'max-h-0'}`}>
                       <ul className="w-full h-full">
                         {item.child.map((menuChild, index) => {
                           return (
-                            <li key={index}><a href={`${menuChild.link}`} className="block text-[14px] text-[#677294] px-[10%] py-[14px] capitalize border-b-[1px] border-solid border-[#dbeefd]">{menuChild.title}</a></li>
+                            <li key={index}>
+                              <a href={`${menuChild.link}`} className="block text-[14px] text-[#677294] px-[10%] py-[14px] capitalize border-b-[1px] border-solid border-[#dbeefd]">
+                                {menuChild.title}
+                              </a>
+                            </li>
                           )
                         })}
                       </ul>
@@ -108,14 +117,14 @@ function Header() {
               })}
             </ul>
             <div className="button-header-wrap flex items-center justify-center gap-[12px] py-[10px] bg-[#fff]">
-              {/* <Button  hoverclass='border-button' width='107px' height='39.5px' icon='faSquarePlus}' value='Login' /> */}
-              <a href="/register" className="button-register bg-button text-[13px] text-[#fff] w-[107px] h-[39.5px] flex items-center justify-center"><p className="relative z-[1]">Sign Up</p></a>
+              <Button hoverclass='border-button' link='login' width='107px' height='39.5px' color='#333' icon={faSquarePlus} value='Login' />
+              <Button hoverclass='bg-button' link='sign-up' width='107px' height='39.5px' color='#fff' icon={faUser} value='Sign Up' />
             </div>
           </div>
         </div>
         <div className="button-header-wrap hidden lg:flex items-center gap-[14px]">
-          <a href="/login" className="button-login border-button w-[120px] h-[50px] flex items-center justify-center"><p className="relative z-[1]">Login</p></a>
-          <a href="/register" className="button-register text-[#fff] bg-button w-[120px] h-[50px] flex items-center justify-center"><p className="relative z-[1]">Sign Up</p></a>
+          <Button hoverclass='border-button' link='login' width='120px' height='50px' color='#333' icon={faSquarePlus} value='Login' />
+          <Button hoverclass='bg-button' link='sign-up' width='120px' height='50px' color='#fff' icon={faUser} value='Sign Up' />
         </div>
       </div>
     </header>

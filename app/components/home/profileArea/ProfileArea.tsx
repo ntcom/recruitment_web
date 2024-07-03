@@ -1,8 +1,11 @@
+"use client"
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight, faHeart } from '@fortawesome/free-solid-svg-icons';
 
 function ProfileArea() {
   const ProfileLists = [
@@ -75,12 +78,12 @@ function ProfileArea() {
                   <div className='box-text-profile relative'>
                     <h3 className='text-[18px] font-semibold mb-[8px]'>{item.name}</h3>
                     <p className='text-[#808291] text-[14px] font-normal mb-[10px]'>{item.job}</p>
-                    <a href={`${item.link}`} className='flex items-center gap-[4px]'>
+                    <a href={`${item.link}`} className='flex items-center gap-[8px]'>
                       <p className='button-view-profile'>View Profile</p>
-                      <i></i>
+                      <FontAwesomeIcon icon={faArrowRight} className='text-[13px] text-[#4cce5b]'/>
                     </a>
                     <button className='absolute bottom-[25px] right-[25px] w-[30px] h-[30px] border-[1px] border-solid border-[#dedede] rounded-full'>
-                      <i></i>
+                      <FontAwesomeIcon icon={faHeart} className='text-[#4cce5b]'/>
                     </button>
                   </div>
                 </div>
