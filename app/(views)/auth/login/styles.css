@@ -1,0 +1,44 @@
+.wrap-login .fb-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 48%;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+    background-color: #005b7f;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid transparent;
+}
+.wrap-login .fb-button:hover{
+    border: 1px solid #005b7f;
+    background-color: transparent;
+    color: #005b7f;
+}
+.wrap-login .google-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 48%;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+    background-color: #c80911;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid transparent;
+}
+.wrap-login .google-button:hover{
+    border: 1px solid #c80911;
+    background-color: transparent;
+    color: #c80911;
+}

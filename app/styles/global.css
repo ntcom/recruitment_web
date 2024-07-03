@@ -473,7 +473,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: width 20s, opacity 0.6s;
+  /* transition: width 20s, opacity 0.6s; */
   transform: translateY(0);
 }
 @media (max-width: 1023.5px) {
@@ -736,14 +736,4 @@ footer {
 
 .statis {
   background: linear-gradient(90deg, rgb(56, 167, 69) 0%, rgb(76, 206, 91) 63%);
-}
-.app-card {
-  @apply border border-solid border-[#d6d5d5];
-}
-
-.app-heading {
-  @apply text-[38px] font-semibold text-[#333333] leading-[1.4];
-}
-.app-heading-2 {
-  @apply text-[28px] font-semibold text-[#333333] leading-[1.4];
 }

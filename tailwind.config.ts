@@ -19,7 +19,7 @@ const config = {
         sm: "100%",
         md: "100%",
         lg: "1024px",
-        xl: "1344px",
+        xl: "1320px",
       },
     },
     extend: {
@@ -27,7 +27,10 @@ const config = {
         poppins: ["var(--font-poppins), sans-serif", ...fontFamily.sans],
         sans: ["var(--font-sans), sans-serif", ...fontFamily.sans],
       },
-      backgroundImage: {},
+      backgroundImage: {
+        'primary-linear': 'linear-gradient(90deg, rgb(56, 167, 69) 0%, rgb(76, 206, 91) 63%)',
+      },
+
       colors: {
         ...themesConfig.color,
         secondary: {

@@ -1,0 +1,26 @@
+.app-card {
+    @apply border border-solid border-[#d6d5d5];
+}
+
+.app-heading {
+    @apply text-[38px] font-semibold text-[#333333] leading-[1.4] capitalize;
+}
+
+.app-heading-2 {
+    @apply text-[28px] font-semibold text-[#333333] leading-[1.4] capitalize;
+}
+
+.app-button-main {
+    color: #ffffff;
+    background: linear-gradient(90deg, rgb(56, 167, 69) 0%, rgb(76, 206, 91) 63%);
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 0;
+    transition: 0.3s all ease;
+}
+
+.app-button-basic {
+    color: #fff;
+    background: linear-gradient(90deg, rgb(56, 167, 69) 0%, rgb(76, 206, 91) 63%);
+    border-radius: 0;
+  }

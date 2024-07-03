@@ -8,13 +8,12 @@ import { FormHelperText } from "@mui/material";
 interface Props<T extends FieldValues> extends Omit<TextFieldProps, "name"> {
   control: Control<T>;
   name: FieldPath<T>;
-  label: string;
+  label?: string;
 }
 
 const ControllerTextField = <T extends FieldValues>(props: Props<T>) => {
   const { control, name, placeholder, disabled, label, id, size, ...rest } =
     props;
-  console.log("🚀 ~ size:", size);
 
   return (
     <div>
