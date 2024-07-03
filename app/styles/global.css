@@ -852,7 +852,7 @@ footer {
 }
 @media (max-width: 767.5px) {
   .button-candidate-detail {
-    font-size: 14px;
+    font-size: 13px;
     height: 47px;
     width: 138px;
   }
@@ -878,6 +878,11 @@ footer {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
+}
+@media(max-width: 1023.5px) {
+  .title-info-right-candidate {
+    font-size: 20px;
+  }
 }
 .title-info-right-candidate::before {
   content: "";

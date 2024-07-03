@@ -75,7 +75,7 @@ function CandidateDetail() {
             </div>
           </div>
           <div className="w-[100%] lg:w-[60%]">
-            <div className='mb-[70px]'>
+            <div className='mb-[40px] lg:mb-[70px]'>
               <h3 className='text-[28px] lg:text-[38px] text-[#51504e] font-bold mb-[5px] lg:mb-[8px]'>Jac Jacson</h3>
               <p className='text-[16px] lg:text-[18px] text-[#999897] mb-[5px]'>Web Consultant</p>
               <p className='text-[14px] lg:text-[16px] text-[#838383] mb-[30px]'>Bachelor of Business Administation university of Gable</p>
@@ -94,34 +94,34 @@ function CandidateDetail() {
               <div className='pb-[30px] last:pb-0'>
                 <h3 className='title-info-right-candidate mb-[10px]'>Description</h3>
                 <div className='text-[#838383]'>
-                  <p className='mb-[10px]'>
+                  <p className='mb-[10px] text-[14px] lg:text-[16px]'>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.Lorem ipsum dolor sit amet, consectetur adipiscing.
                   </p>
-                  <p className='mb-[10px]'>Risus commodo viverra maecenas accumsan lacus vel facilisis.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                  <p className='mb-[10px] text-[14px] lg:text-[16px]'>Risus commodo viverra maecenas accumsan lacus vel facilisis.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                 </div>
               </div>
               <div className='pb-[30px] last:pb-0'>
                 <h3 className='title-info-right-candidate mb-[10px]'>Education</h3>
                 <div className='text-[#838383]'>
-                  <p className='mb-[10px]'>PHD degree in Criminal Law at University of Gable Internatinal (2006)</p>
-                  <p className='mb-[10px]'>Master of Family Law at University of Gable International (2002)</p>
-                  <p className='mb-[10px]'>MBBS LLB (Hon’s) in at University of Gable International (2002)</p>
-                  <p className='mb-[10px]'>Higher Secondary Certificate at Gable International collage (1991)</p>
+                  <p className='mb-[10px] text-[14px] lg:text-[16px]'>PHD degree in Criminal Law at University of Gable Internatinal (2006)</p>
+                  <p className='mb-[10px] text-[14px] lg:text-[16px]'>Master of Family Law at University of Gable International (2002)</p>
+                  <p className='mb-[10px] text-[14px] lg:text-[16px]'>MBBS LLB (Hon’s) in at University of Gable International (2002)</p>
+                  <p className='mb-[10px] text-[14px] lg:text-[16px]'>Higher Secondary Certificate at Gable International collage (1991)</p>
                 </div>
               </div>
               <div className='pb-[30px] last:pb-0'>
                 <h3 className='title-info-right-candidate mb-[10px]'>Research</h3>
                 <div className='text-[#838383]'>
-                  <p className='mb-[10px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra</p>
+                  <p className='mb-[10px] text-[14px] lg:text-[16px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra</p>
                 </div>
               </div>
               <div className='pb-[30px] last:pb-0'>
                 <h3 className='title-info-right-candidate mb-[10px]'>Work Experiences</h3>
                 <div className='text-[#838383]'>
-                  <p className='mb-[10px]'>Hand On experience with Wordpress</p>
-                  <p className='mb-[10px]'>Better knowledge of front-end technologies, including HTML5, CSS3, JavaScript, jQuery</p>
-                  <p className='mb-[10px]'>Belief – believing in yourself and those around you</p>
-                  <p className='mb-[10px]'>Experience designing and developing responsive design websites</p>
+                  <p className='mb-[10px] text-[14px] lg:text-[16px]'>Hand On experience with Wordpress</p>
+                  <p className='mb-[10px] text-[14px] lg:text-[16px]'>Better knowledge of front-end technologies, including HTML5, CSS3, JavaScript, jQuery</p>
+                  <p className='mb-[10px] text-[14px] lg:text-[16px]'>Belief – believing in yourself and those around you</p>
+                  <p className='mb-[10px] text-[14px] lg:text-[16px]'>Experience designing and developing responsive design websites</p>
                 </div>
               </div>
             </div>
