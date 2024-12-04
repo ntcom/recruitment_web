@@ -17,11 +17,11 @@ export default function Home() {
       <JobArea />
       <AccountArea />
       <PortalArea />
-      {/* <CompaniesArea /> */}
+      <CompaniesArea />
       <PopularArea />
-      {/* <ProfileArea /> */}
+      <ProfileArea />
       <AppArea />
-      <BlogArea />
+      {/* <BlogArea /> */}
     </main>
   );
 }

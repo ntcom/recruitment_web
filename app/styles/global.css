@@ -48,7 +48,8 @@ body {
   position: relative;
   transition: all 0.5s ease;
 }
-.border-button p {
+.border-button p,
+.border-button svg {
   position: relative;
   z-index: 1;
 }
@@ -95,6 +96,11 @@ body {
   background: linear-gradient(90deg, rgb(56, 167, 69) 0%, rgb(76, 206, 91) 63%);
   transition: 0.5s all ease;
   z-index: 0;
+}
+.bg-button p,
+.bg-button svg {
+  position: relative;
+  z-index: 1;
 }
 .bg-button:hover {
   color: #333;
@@ -362,6 +368,12 @@ footer {
 .menu-footer > ul > li:hover > a {
   color: #333;
 }
+.list-social a svg {
+  transition: all 0.3s linear;
+}
+.list-social a:hover svg {
+  fill: #333;
+}
 .copyright a {
   transition: all 0.5s ease;
 }
@@ -434,6 +446,11 @@ footer {
   right: 30px;
   transform: translateY(-50%);
 }
+@media (max-width: 767.5px) {
+  .banner form button {
+    right: 15px;
+  }
+}
 .banner form button svg path {
   fill: rgb(76, 206, 91);
 }
@@ -446,18 +463,23 @@ footer {
   padding-right: 40px;
   outline: none;
   color: #878ba5;
-  -webkit-appearance: none; 
-  -moz-appearance: none; 
-  appearance: none; 
-  padding-right: 50px; 
-  background-image: url(/assets/images/arrow-down.svg) !important; 
-  background-position: right 40px center !important; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right: 50px;
+  background-image: url(/assets/images/arrow-down.svg) !important;
+  background-position: right 40px center !important;
   background-size: 16px auto;
-  background-repeat: no-repeat !important; 
+  background-repeat: no-repeat !important;
 }
 @media (max-width: 1023.5px) {
   .banner form select {
     padding-left: 12px;
+  }
+}
+@media (max-width: 767.5px) {
+  .banner form select {
+    background-position: right 15px center !important;
   }
 }
 .banner form > button {
@@ -536,6 +558,10 @@ footer {
 .recent-title-wrap {
   box-shadow: 0 0 15px 0 #ddd;
 }
+.recent-title-wrap button.active {
+  color: #fff;
+  background: linear-gradient(90deg, rgb(56, 167, 69) 0%, rgb(76, 206, 91) 63%);
+}
 .recent-job-item-company {
   background: linear-gradient(90deg, rgb(56, 167, 69) 0%, rgb(76, 206, 91) 63%);
   background-clip: text;
@@ -579,6 +605,37 @@ footer {
 }
 .account-step-item:hover > div {
   box-shadow: 0 0 0 8px #4bcc5a;
+}
+.recent-job-pagination a {
+  position: relative;
+  transition: 0.5s all ease;
+}
+.recent-job-pagination a svg,
+.recent-job-pagination a p {
+  z-index: 1;
+}
+.recent-job-pagination a::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  opacity: 0;
+  border-radius: 50%;
+  transition: 0.5s all ease;
+  background: linear-gradient(90deg, rgb(56, 167, 69) 0%, rgb(76, 206, 91) 63%);
+}
+.recent-job-pagination a:hover::after {
+  width: 100%;
+  opacity: 1;
+}
+.recent-job-pagination a:hover svg path {
+  fill: #fff;
+}
+.recent-job-pagination a:hover p {
+  color: #fff;
 }
 
 /* Portal */
@@ -746,4 +803,110 @@ footer {
 }
 .app-heading-2 {
   @apply text-[28px] font-semibold text-[#333333] leading-[1.4];
+}
+
+/* Job Detail */
+
+.button-apply-detail {
+  font-size: 18px;
+  color: #fff;
+  transition: 0.5s all ease;
+  background: linear-gradient(90deg, rgb(56, 167, 69) 0%, rgb(76, 206, 91) 63%);
+  width: 100%;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 767.5px) {
+  .button-apply-detail {
+    font-size: 14px;
+    height: 49px;
+  }
+}
+.button-apply-detail:hover {
+  background: linear-gradient(270deg, #38a745 0%, #4cce5b 63%);
+}
+.title-sidebar-detail::after {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 4px;
+  bottom: -2px;
+  left: 0;
+  background: linear-gradient(90deg, rgb(56, 167, 69) 0%, rgb(76, 206, 91) 63%);
+}
+
+/* Candidate Detail */
+.button-candidate-detail {
+  font-size: 18px;
+  color: #fff;
+  transition: 0.5s all ease;
+  background: linear-gradient(90deg, rgb(56, 167, 69) 0%, rgb(76, 206, 91) 63%);
+  width: 200px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+@media (max-width: 767.5px) {
+  .button-candidate-detail {
+    font-size: 13px;
+    height: 47px;
+    width: 138px;
+  }
+}
+.button-candidate-detail:hover {
+  background: linear-gradient(270deg, #38a745 0%, #4cce5b 63%);
+}
+
+.info-right-candidate::before {
+  content: "";
+  position: absolute;
+  height: 95%;
+  width: 3px;
+  bottom: 0;
+  left: 5px;
+  background: #d9f1dc;
+}
+.title-info-right-candidate {
+  font-weight: 600;
+  font-size: 22px;
+  background: linear-gradient(90deg, rgb(56, 167, 69) 0%, rgb(76, 206, 91) 63%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+@media(max-width: 1023.5px) {
+  .title-info-right-candidate {
+    font-size: 20px;
+  }
+}
+.title-info-right-candidate::before {
+  content: "";
+  width: 13px;
+  height: 13px;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 9px;
+  left: -60px;
+  display: inline-block;
+  border: 4px solid;
+  border-image-source: linear-gradient(
+    90deg,
+    rgb(56, 167, 69) 0%,
+    rgb(76, 206, 91) 63%
+  );
+  border-image-slice: 1;
+}
+.title-info-right-candidate::after {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 3px;
+  background: #dbf4de;
+  left: -31px;
+  top: 15px;
 }

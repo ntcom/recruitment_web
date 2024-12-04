@@ -1,8 +1,12 @@
+"use client"
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight, faHeart } from '@fortawesome/free-solid-svg-icons';
+import CandidateItem from '../../common/CandidateItem';
 
 function ProfileArea() {
   const ProfileLists = [
@@ -67,22 +71,11 @@ function ProfileArea() {
           breakpoints={breakpoints}
           speed={700}
         >
-          {ProfileLists.map((item, index) => {
+          {ProfileLists.map((ProfileList, index) => {
             return (
               <SwiperSlide key={index}>
                 <div className="slide-profile-item">
-                  <div><img src={`${item.img}`} alt="" className='h-[426px] md:h-[422px] lg:h-[390px] w-[100%] object-cover' /></div>
-                  <div className='box-text-profile relative'>
-                    <h3 className='text-[18px] font-semibold mb-[8px]'>{item.name}</h3>
-                    <p className='text-[#808291] text-[14px] font-normal mb-[10px]'>{item.job}</p>
-                    <a href={`${item.link}`} className='flex items-center gap-[4px]'>
-                      <p className='button-view-profile'>View Profile</p>
-                      <i></i>
-                    </a>
-                    <button className='absolute bottom-[25px] right-[25px] w-[30px] h-[30px] border-[1px] border-solid border-[#dedede] rounded-full'>
-                      <i></i>
-                    </button>
-                  </div>
+                  <CandidateItem ProfileList={ProfileList} />
                 </div>
               </SwiperSlide>
             )
